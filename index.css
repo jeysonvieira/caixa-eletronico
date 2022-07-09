@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+    width: 750px;
+    margin: 10% auto 10% auto;
+}
+
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+header .cabeca{
+    width: 50%;
+    background-color: gainsboro;
+    padding-left: 20px;
+}
+
+header #logo{
+    font-size: 1.4em;
+}
+
+main .line{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+
+main .line a{
+    text-decoration: none;
+    color: black;
+}
+
+main .option{
+    width: 300px;
+    height: 100px;
+    margin: 35px 0px 25px 0px;
+    text-align: center;
+    background-color: gainsboro;
+
+}
+
+main .option p{
+    padding-top: 34px;
+}
+

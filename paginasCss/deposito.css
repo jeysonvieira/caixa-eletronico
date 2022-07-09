@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+
+    width: 750px;
+    margin: 10% auto 10% auto;
+}
+
+
+header{
+    display: flex;
+    flex-flow: row nowrap;
+
+}
+
+header .cabeca{
+    width: 50%;
+    background-color: gainsboro;
+    padding-left: 20px;
+}
+
+header #logo{
+    font-size: 1.4em;
+}

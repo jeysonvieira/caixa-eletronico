@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depósito</title>
+    <link rel="stylesheet" href="../paginasCss/deposito.css">
+</head>
+<body>
+
+    <header>
+        <div id="logo" class="cabeca">
+            <h1>CAIXA</h1>
+        </div>
+
+        <div id="subtexto" class="cabeca">
+            <h2>AUTO-ATENDIMENTO</h2>
+            <p>POR FAVOR, PRESSIONE O BOTÃO NA OPÇÃO DESEJADA</p>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="operacoes">
+
+            <h1>TIPOS DE CONTA</h1>
+
+            <ul>
+                <li>001 - CONTA CORRENTE PESSOA FÍSICA</li>
+                <li>003 - CONTA CORRENTE PESSOA JURÍDICA</li>
+                <li>006 - DEPÓSITO ENTIDADES PÚBLICAS</li>
+            </ul>
+
+            <ul>
+                <li>023 - CONTA CAIXA FÁCIL</li>
+                <li>013 - CONTA POUPANÇA PESSOA FÍSICA</li>
+                <li>022 - CONTA POUPANÇA PESSOA JURÍDICA</li>
+            </ul>
+        </div>
+
+        <div id="dados">
+
+            <form action="" autocomplete="off">
+                <fieldset>
+                    
+
+                    <div id="primeiralinha">
+
+                        <input type="number" name="agencia" id="agencia" class="caixamedia">
+                        <label for="agencia">AGÊNCIA</label>
+
+                        <input type="number" name="tipoconta" id="tipoconta" class="caixamenor">
+                        <label for="tipoconta">TIPO.CONTA</label>
+
+
+                        <input type="number" name="conta" id="conta" class="caixamedia">
+                        <label for="conta">CONTA</label>
+
+
+                        <input type="number" name="dv" id="dv" class="caixamenor">
+                        <label for="dv">DV</label>
+                    </div>
+                    <div id="segundalinha">
+                        <input type="number" name="valor" id="valor" class="caixamenor">
+                        <label for="valor">VALOR TOTAL: DINHEIRO</label>
+                    </div>
+                    <div id="terceiralinha">
+                        <input type="text" name="ddd" id="ddd" class="caixamenor">
+                        <input type="text" name="telefone" id="telefone" class="caixamedia">
+                        <label for="telefone">DDD/ TELEFONE PARA CONTATO</label>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+
+        <div id="cancelAccept">
+
+            <a href="../index.html">
+
+                <div>
+
+                    <p>CANCELAR</p>
+
+                </div>
+            </a>
+
+            <div>
+                <button type="submit">
+                    CONFIRMAR
+                </button>
+            </div>
+        </div>
+
+
+
+
+    </main>
+    
+</body>
+</html>

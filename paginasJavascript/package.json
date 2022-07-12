@@ -1,0 +1,21 @@
+{
+  "type" : "module",
+  "name": "caixa-eletronico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "arrays.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeysonvieira/caixa-eletronico.git"
+  },
+  "keywords": [],
+  "author": "Jeyson Saraiva Vieira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeysonvieira/caixa-eletronico/issues"
+  },
+  "homepage": "https://github.com/jeysonvieira/caixa-eletronico#readme"
+}

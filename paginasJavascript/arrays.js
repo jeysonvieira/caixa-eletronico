@@ -1,8 +1,8 @@
 const usuariosCaixa = [
-    {id: 01,
+    {id: 1,
      nome: 'Jeyson Saraiva Vieira',
      agencia: 1234,
-     tipoconta: 001,
+     tipoconta: 1,
      conta: 123456,
      dv: 1,
      saldo: 1350.89,
@@ -12,10 +12,10 @@ const usuariosCaixa = [
 
 
 
-    {id:02,
+    {id:2,
      nome: 'Mariane Sousa Neto',
      agencia: 4321,
-     tipoconta: 013,
+     tipoconta: 13,
      conta: 654321,
      dv: 2,
      saldo: 850.44,
@@ -25,10 +25,10 @@ const usuariosCaixa = [
 
 
 
-    {id:03,
+    {id:3,
      nome: 'Carlos Nunes Caetano',
      agencia: 1243,
-     tipoconta: 003,
+     tipoconta: 43,
      conta: 123654,
      dv: 3,
      saldo: 4550.39,
@@ -50,3 +50,5 @@ const usuariosCaixa = [
     {nome: 'Karynne Santos Silveira',}
 ]
 
+
+export default usuariosCaixa

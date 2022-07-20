@@ -25,3 +25,86 @@ header .cabeca{
 header #logo{
     font-size: 1.4em;
 }
+
+
+
+
+
+
+
+main #cancelAccept{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #cancelAccept a{
+    text-decoration: none;
+    color: black;
+}
+
+main #cancelAccept div{
+    margin-top: 10px;
+}
+
+
+main #bordadatela{
+    height: 300px;
+    border: 1px solid black;
+    margin: 30px 0px 30px 0px;
+}
+
+
+main #teladocaixa{
+    height: 80%;
+    width: 90%;
+
+    margin: 30px auto 0px auto;
+
+}
+
+#divnome{
+    display: flex;
+    flex-flow: row nowrap;
+
+
+}
+
+
+#labelnome{
+    
+}
+
+#nome{
+    width: 300px;
+    height: 18px;
+    font-size: 18px;
+    display: inline;
+}
+
+#submitnome{
+
+}
+
+
+.caixamedia{
+    width: 100px;
+}
+
+.caixamenor{
+    width: 50px;
+}
+
+.ocultarP{
+    visibility: hidden;
+}
+
+.alinhamentoP{
+    display: inline;
+    
+}
+
+.ocultar{
+    visibility: hidden;
+}

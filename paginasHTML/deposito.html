@@ -39,38 +39,57 @@
             </ul>
         </div>
 
+        <div id="bordadatela">
+
+            <div id="teladocaixa">
+
+                <p class="alinhamentoP ocultarP" id="p1">Id:<p class= "alinhamentoP" id="idUsuario"> </p></p>
+                <p class="alinhamentoP ocultarP" id="p2">Nome:<p class= "alinhamentoP" id="nomeUsuario"> </p></p>
+                <p class="alinhamentoP ocultarP" id="p3">Numero:<p class="alinhamentoP" id="numeroUsuario"> </p></p>
+                <p class="alinhamentoP ocultarP" id="p4">Saldo:<p class="alinhamentoP" id="saldoUsuario"> </p></p>
+
+            </div>
+
+        </div>
+
         <div id="dados">
 
-            <form action="" autocomplete="off">
+            <form action="" autocomplete="off" id="form">
                 <fieldset>
                     
 
                     <div id="primeiralinha">
 
-                        <input type="number" name="agencia" id="agencia" class="caixamedia">
-                        <label for="agencia">AGÊNCIA</label>
+                        <input type="number" name="agencia" id="agencia" class="caixamedia ocultar" required>
+                        <label for="agencia" id="label1" class="ocultar">AGÊNCIA</label>
 
-                        <input type="number" name="tipoconta" id="tipoconta" class="caixamenor">
-                        <label for="tipoconta">TIPO.CONTA</label>
-
-
-                        <input type="number" name="conta" id="conta" class="caixamedia">
-                        <label for="conta">CONTA</label>
+                        <input type="number" name="tipoconta" id="tipoconta" class="caixamenor ocultar" required>
+                        <label for="tipoconta" id="label2" class="ocultar">TIPO.CONTA</label>
 
 
-                        <input type="number" name="dv" id="dv" class="caixamenor">
-                        <label for="dv">DV</label>
+                        <input type="number" name="conta" id="conta" class="caixamedia ocultar" required>
+                        <label for="conta" id="label3" class="ocultar">CONTA</label>
+
+
+                        <input type="number" name="dv" id="dv" class="caixamenor ocultar" required>
+                        <label for="dv" id="label4" class="ocultar">DV</label>
                     </div>
                     <div id="segundalinha">
-                        <input type="number" name="valor" id="valor" class="caixamenor">
-                        <label for="valor">VALOR TOTAL: DINHEIRO</label>
+                        <input type="number" name="valor" id="valor" class="caixamedia ocultar">
+                        <label for="valor" id="label5" class="ocultar">VALOR TOTAL: DINHEIRO</label>
+
+
+                        <div id="divNome">
+                            <label for="nome" id="labelnome" class="ocultarNome">NOME:</label>
+                            <input type="text" name="nome" id="nome" class="ocultarNome">
+                            <button id="submitnome" class="ocultarNome">Confirmar Nome</button>
+                        </div>
+
                     </div>
                     <div id="terceiralinha">
-                        <input type="text" name="ddd" id="ddd" class="caixamenor">
-                        <input type="text" name="telefone" id="telefone" class="caixamedia">
-                        <label for="telefone">DDD/ TELEFONE PARA CONTATO</label>
-
-                        <input type="submit" value="teste" id="teste" name="teste">
+                        <input type="text" name="ddd" id="ddd" class="caixamenor ocultar">
+                        <input type="text" name="telefone" id="telefone" class="caixamedia ocultar">
+                        <label for="telefone" id="label6" class="ocultar">DDD/ TELEFONE PARA CONTATO</label>
                     </div>
 
 
@@ -103,6 +122,6 @@
     </main>
     
 
-    <script src="../paginasJavascript/deposito.js"></script>
+    <script type="module" src="../paginasJavascript/deposito.js"></script>
 </body>
 </html>

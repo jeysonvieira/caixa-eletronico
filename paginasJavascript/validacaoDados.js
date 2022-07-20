@@ -1,6 +1,6 @@
-import usuariosCaixa from "./arrays";
+import usuariosCaixa from "../paginasJavascript/arrays.js";
 
-class Verefica{
+class Verifica{
 
     id;
 
@@ -18,22 +18,152 @@ class Verefica{
     
     }
 
-    VereficaTudo(){
-        if(this.id === usuariosCaixa[0].id){
-        return true
+
+    VerificaId(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+            
+            if(this.id === usuariosCaixa[contador].id){
+                return true
+            }
+            contador++
+
+
+
         }
-        else{
-            return false
+    }
+
+
+    VerificaNome(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.nome == usuariosCaixa[contador].nome){
+                return true
+            }
+            contador++
+
         }
 
     }
+
+
+    VerificaAgencia(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.agencia == usuariosCaixa[contador].agencia){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+
+    VerificaTipoConta(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.tipoconta == usuariosCaixa[contador].tipoconta){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+
+    VerificaConta(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.conta == usuariosCaixa[contador].conta){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+
+    VerificaDv(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.dv == usuariosCaixa[contador].dv){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+
+    VerificaSaldo(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.saldo == usuariosCaixa[contador].saldo){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+
+    Verificaddd(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.ddd == usuariosCaixa[contador].ddd){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+
+
+    VerificaNumero(){
+        var contador = 0
+        while(contador < usuariosCaixa.length){
+
+            if(this.numero == usuariosCaixa[contador].numero){
+                return true
+            }
+            contador++
+
+        }
+
+    }
+
+    
+
+
+
+
 }
 
+//const usuario = new Verifica(1, 'Jeyson Saraiva Vieira', 4321, 13, 654321 , 3, 1350.89, '86', '95897185')
 
-const teste = new Verefica(usuariosCaixa[0].id)
+//console.log(usuario.VerificaId())
+//console.log(usuario.VerificaNome())
+//console.log(usuario.VerificaAgencia())
+//console.log(usuario.VerificaTipoConta())
+//console.log(usuario.VerificaConta())
+//console.log(usuario.VerificaDv())
+//console.log(usuario.VerificaSaldo())
+//console.log(usuario.Verificaddd())
+//console.log(usuario.VerificaNumero())
 
 
-export default Verefica;
-
-
-
+export default Verifica;

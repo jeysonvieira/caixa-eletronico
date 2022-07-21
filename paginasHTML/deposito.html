@@ -58,38 +58,39 @@
                 <fieldset>
                     
 
-                    <div id="primeiralinha">
+                    <div id="primeiralinha" class="ocultar">
 
-                        <input type="number" name="agencia" id="agencia" class="caixamedia ocultar" required>
-                        <label for="agencia" id="label1" class="ocultar">AGÊNCIA</label>
+                        <input type="number" name="agencia" id="agencia" class="caixamedia ">
+                        <label for="agencia" id="label1">AGÊNCIA</label>
 
-                        <input type="number" name="tipoconta" id="tipoconta" class="caixamenor ocultar" required>
-                        <label for="tipoconta" id="label2" class="ocultar">TIPO.CONTA</label>
-
-
-                        <input type="number" name="conta" id="conta" class="caixamedia ocultar" required>
-                        <label for="conta" id="label3" class="ocultar">CONTA</label>
+                        <input type="number" name="tipoconta" id="tipoconta" class="caixamenor" >
+                        <label for="tipoconta" id="label2">TIPO.CONTA</label>
 
 
-                        <input type="number" name="dv" id="dv" class="caixamenor ocultar" required>
-                        <label for="dv" id="label4" class="ocultar">DV</label>
+                        <input type="number" name="conta" id="conta" class="caixamedia">
+                        <label for="conta" id="label3">CONTA</label>
+
+
+                        <input type="number" name="dv" id="dv" class="caixamenor" >
+                        <label for="dv" id="label4">DV</label>
                     </div>
-                    <div id="segundalinha">
-                        <input type="number" name="valor" id="valor" class="caixamedia ocultar">
-                        <label for="valor" id="label5" class="ocultar">VALOR TOTAL: DINHEIRO</label>
-
-
-                        <div id="divNome">
-                            <label for="nome" id="labelnome" class="ocultarNome">NOME:</label>
-                            <input type="text" name="nome" id="nome" class="ocultarNome">
-                            <button id="submitnome" class="ocultarNome">Confirmar Nome</button>
-                        </div>
+                    <div id="segundalinha" class="ocultar">
+                        <input type="number" name="valor" id="valor" class="caixamedia">
+                        <label for="valor" id="label5">VALOR TOTAL: DINHEIRO</label>
 
                     </div>
-                    <div id="terceiralinha">
-                        <input type="text" name="ddd" id="ddd" class="caixamenor ocultar">
-                        <input type="text" name="telefone" id="telefone" class="caixamedia ocultar">
-                        <label for="telefone" id="label6" class="ocultar">DDD/ TELEFONE PARA CONTATO</label>
+
+                    <div id="divNome" class="classnome">
+                        <label for="nome" id="labelnome" class="ocultarNome">NOME:</label>
+                        <input type="text" name="nome" id="nome" class="ocultarNome">
+                        <button id="submitnome" class="ocultarNome">Confirmar Nome</button>
+                    </div>
+
+                    
+                    <div id="terceiralinha" class="ocultar">
+                        <input type="text" name="ddd" id="ddd" class="caixamenor">
+                        <input type="text" name="telefone" id="telefone" class="caixamedia">
+                        <label for="telefone" id="label6">DDD/ TELEFONE PARA CONTATO</label>
                     </div>
 
 
@@ -104,7 +105,7 @@
                             </div>
                         </a>
             
-                        <div>
+                        <div id="botaoSub" class="ocultar">
 
                             <input type="submit" name="submit" id="submit" value="confirmar">
                             

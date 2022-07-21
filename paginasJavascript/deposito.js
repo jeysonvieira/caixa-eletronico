@@ -29,18 +29,55 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
     //NOME DO USUARIO E BOTÃO.
 
     const botaoenviar = document.getElementById('submitnome')
+    const inputnome = document.getElementById('nome')
+    const divnome = document.getElementById('divNome')
+
+
+
+    //BOTÃO E LINHAS DOS INPUTS PARA APARECER APÓS O NOME.
+
+    const linha1 = document.getElementById('primeiralinha')
+    const linha2 = document.getElementById('segundalinha')
+    const linha3 = document.getElementById('terceiralinha')
+    const botaoSub = document.getElementById('botaoSub')
 
 
     //PARAGRAFOS PARA A INFORMAÇÃO DOS DADOS NA TELA.
 
 
     const idUsuario = document.getElementById('idUsuario')
-    const nomeUsuario = document.getElementById('idUsuario')
-    const numeroUsuario = document.getElementById('idUsuario')
-    const saldoUsuario = document.getElementById('idUsuario')
+    const nomeUsuario = document.getElementById('nomeUsuario')
+    const numeroUsuario = document.getElementById('numeroUsuario')
+    const saldoUsuario = document.getElementById('saldoUsuario')
 
 
-    //btn.addEventListener("click", ObtemValor)
+    botaoenviar.onclick = (a) =>{
+        a.preventDefault()
+
+        const nomeValue = inputnome.value
+
+        criaNome(nomeValue)
+
+    }
+
+
+    function criaNome(nome){
+        const nomeUsu = new Verifica('', nome)
+
+        if(nomeUsu.VerificaNome()){
+            //console.log('certo')
+
+            divnome.classList.add('ocultar')
+            
+            linha1.classList.remove('ocultar')
+            linha2.classList.remove('ocultar')
+            linha3.classList.remove('ocultar')
+            botaoSub.classList.remove('ocultar')
+
+        }
+
+        
+    }
 
 
     btn.onclick = (e) => {

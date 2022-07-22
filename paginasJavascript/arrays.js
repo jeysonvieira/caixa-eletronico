@@ -1,6 +1,6 @@
 const usuariosCaixa = [
     {id: 1,
-     nome: 'Jeyson Saraiva Vieira',
+     nome: 'jeyson saraiva vieira',
      agencia: 1234,
      tipoconta: 1,
      conta: 123456,
@@ -13,7 +13,7 @@ const usuariosCaixa = [
 
 
     {id:2,
-     nome: 'Mariane Sousa Neto',
+     nome: 'mariane sousa neto',
      agencia: 4321,
      tipoconta: 13,
      conta: 654321,
@@ -26,7 +26,7 @@ const usuariosCaixa = [
 
 
     {id:3,
-     nome: 'Carlos Nunes Caetano',
+     nome: 'carlos nunes caetano',
      agencia: 1243,
      tipoconta: 43,
      conta: 123654,
@@ -38,16 +38,16 @@ const usuariosCaixa = [
 
 
 
-    {nome: 'Charles Costa Oliveira',},
+    {nome: 'charles costa oliveira',},
 
 
 
-    {nome: 'Isadora Carvalho Teles',},
+    {nome: 'isadora carvalho teles',},
 
 
 
 
-    {nome: 'Karynne Santos Silveira',}
+    {nome: 'karynne santos silveira',}
 ]
 
 

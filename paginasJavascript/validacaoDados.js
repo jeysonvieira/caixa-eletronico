@@ -39,7 +39,9 @@ class Verifica{
         while(contador < usuariosCaixa.length){
 
             if(this.nome == usuariosCaixa[contador].nome){
-                return true
+                return true + contador
+
+            
             }
             contador++
 

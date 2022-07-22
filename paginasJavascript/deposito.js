@@ -51,6 +51,9 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
     const saldoUsuario = document.getElementById('saldoUsuario')
 
 
+
+    //OBTENDO O NOME DIGITADO.
+
     botaoenviar.onclick = (a) =>{
         a.preventDefault()
 
@@ -61,11 +64,13 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
     }
 
 
+    //CRIANDO UM OBJETO E VERIFICANDO SE O NOME ESTÁ NO BANCO DE DADOS (arrays.js).
+
+
     function criaNome(nome){
         const nomeUsu = new Verifica('', nome)
 
         if(nomeUsu.VerificaNome()){
-            //console.log('certo')
 
             divnome.classList.add('ocultar')
             
@@ -74,10 +79,20 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
             linha3.classList.remove('ocultar')
             botaoSub.classList.remove('ocultar')
 
-        }
+            const id = nomeUsu.VerificaNome()
 
+            console.log(id)
+
+        }
         
     }
+
+    //ID DO NOME DIGITADO.
+
+
+
+
+    //OBTENDO OS VALORES DOS DADOS BANCARIOS DO USUARIO.
 
 
     btn.onclick = (e) => {
@@ -94,6 +109,10 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
         criaUsuario(agencia, tipoconta, conta, dv, valor, ddd, telefone)
     
     }
+
+
+    //CRIANDO UM OBJETO COM OS DADOS PASSADOS E VERIFICANDO A VALIDAÇÃO.
+
 
     function criaUsuario(agencia, tipoconta, conta, dv, valor, ddd, telefone){
         

@@ -50,100 +50,76 @@ class Verifica{
     }
 
 
-    VerificaAgencia(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    VerificaAgencia(id){
 
-            if(this.agencia == usuariosCaixa[contador].agencia){
+        if(this.agencia == usuariosCaixa[id].agencia){
                 return true
-            }
-            contador++
-
         }
+
 
     }
 
 
-    VerificaTipoConta(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    VerificaTipoConta(id){
 
-            if(this.tipoconta == usuariosCaixa[contador].tipoconta){
+        if(this.tipoconta == usuariosCaixa[id].tipoconta){
                 return true
-            }
-            contador++
-
         }
+
+        
 
     }
 
 
-    VerificaConta(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    VerificaConta(id){
 
-            if(this.conta == usuariosCaixa[contador].conta){
+        if(this.conta == usuariosCaixa[id].conta){
                 return true
-            }
-            contador++
-
         }
+
+        
 
     }
 
 
-    VerificaDv(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    VerificaDv(id){
 
-            if(this.dv == usuariosCaixa[contador].dv){
+        if(this.dv == usuariosCaixa[id].dv){
                 return true
-            }
-            contador++
-
         }
+
 
     }
 
 
-    VerificaSaldo(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    VerificaSaldo(id){
 
-            if(this.saldo == usuariosCaixa[contador].saldo){
+        if(this.saldo == usuariosCaixa[id].saldo){
                 return true
-            }
-            contador++
-
         }
+
+        
 
     }
 
 
-    Verificaddd(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    Verificaddd(id){
 
-            if(this.ddd == usuariosCaixa[contador].ddd){
+        if(this.ddd == usuariosCaixa[id].ddd){
                 return true
-            }
-            contador++
-
         }
+
+        
 
     }
 
 
 
-    VerificaNumero(){
-        var contador = 0
-        while(contador < usuariosCaixa.length){
+    VerificaNumero(id){
 
-            if(this.numero == usuariosCaixa[contador].numero){
+        if(this.numero == usuariosCaixa[id].numero){
                 return true
-            }
-            contador++
-
+        
         }
 
     }

@@ -1,4 +1,5 @@
 import Verifica from "../paginasJavascript/validacaoDados.js";
+import usuariosCaixa from "../paginasJavascript/arrays.js";
 
 
 //window.onload = function(){
@@ -79,9 +80,87 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
             linha3.classList.remove('ocultar')
             botaoSub.classList.remove('ocultar')
 
-            const id = nomeUsu.VerificaNome()
+            const id = nomeUsu.VerificaNome() - 1
 
-            console.log(id)
+
+            btn.onclick = (e) => {
+                e.preventDefault()
+                
+                const idUsu = id
+                const nomeUsu = usuariosCaixa[id].nome
+                
+                const agencia = AgenciaForm.value
+                const tipoconta = TipoContaForm.value
+                const conta = ContaForm.value
+                const dv = DvForm.value
+                const valor = ValorForm.value
+                const ddd = dddForm.value
+                const telefone = TelefoneForm.value
+        
+                criaUsuario(idUsu, nomeUsu, agencia, tipoconta, conta, dv, valor, ddd, telefone)
+            
+            }
+        
+        
+            //CRIANDO UM OBJETO COM OS DADOS PASSADOS E VERIFICANDO A VALIDAÇÃO.
+        
+        
+            function criaUsuario(id, nome, agencia, tipoconta, conta, dv, valor, ddd, telefone){
+
+                const usuarioOficial = usuariosCaixa[id]
+
+                console.log(usuarioOficial)
+                
+                const usuario = new Verifica(id, nome, agencia, tipoconta, conta, dv, '', ddd, telefone)
+        
+                if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
+
+                    console.log('Todos dados correto!!!')
+                    p1.classList.remove('ocultarP')
+                    p2.classList.remove('ocultarP')
+                    p3.classList.remove('ocultarP')
+                    p4.classList.remove('ocultarP')
+        
+                    
+        
+                }
+        
+                else if(usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
+                    console.log('Agencia errada')
+
+                    tela.innerHTML = '<h2>Tipo de agência errada!! Corrija os dados. </h2>'
+
+                    
+                
+                }
+        
+                else if(usuario.VerificaAgencia(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
+                    console.log('Tipo de conta errada')
+                    tela.innerHTML = '<h2>Tipo de conta errada!! Corrija os dados. </h2>'
+                }
+        
+                else if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaDv(id)){
+                    console.log('Conta errada')
+                    tela.innerHTML = '<h2>Conta errada!! Corrijir os dados. </h2>'
+                }
+            
+                else if(usuario.VerificaAgencia(id) && usuario.VerificaConta(id) && usuario.VerificaTipoConta(id)){
+                    console.log('DV errado')
+                    tela.innerHTML = '<h2> Dv errado!! Corrijir os dados </h2>'
+                }
+
+                
+        
+                
+                
+            }
+
+
+
+
+
+
+
 
         }
         
@@ -95,62 +174,6 @@ import Verifica from "../paginasJavascript/validacaoDados.js";
     //OBTENDO OS VALORES DOS DADOS BANCARIOS DO USUARIO.
 
 
-    btn.onclick = (e) => {
-        e.preventDefault()  
-        
-        const agencia = AgenciaForm.value
-        const tipoconta = TipoContaForm.value
-        const conta = ContaForm.value
-        const dv = DvForm.value
-        const valor = ValorForm.value
-        const ddd = dddForm.value
-        const telefone = TelefoneForm.value
 
-        criaUsuario(agencia, tipoconta, conta, dv, valor, ddd, telefone)
-    
-    }
-
-
-    //CRIANDO UM OBJETO COM OS DADOS PASSADOS E VERIFICANDO A VALIDAÇÃO.
-
-
-    function criaUsuario(agencia, tipoconta, conta, dv, valor, ddd, telefone){
-        
-        const usuario = new Verifica('', '', agencia, tipoconta, conta, dv, '', ddd, telefone)
-
-        if(usuario.VerificaAgencia() && usuario.VerificaTipoConta() && usuario.VerificaConta() && usuario.VerificaDv()){
-            console.log('Todos dados correto!!!')
-            p1.classList.remove('ocultarP')
-            p2.classList.remove('ocultarP')
-            p3.classList.remove('ocultarP')
-            p4.classList.remove('ocultarP')
-
-            
-
-        }
-
-        else if(usuario.VerificaTipoConta() && usuario.VerificaConta() && usuario.VerificaDv()){
-            console.log('Agencia errada')
-            tela.innerHTML = '<h2>Agencia errada!! Corrija os dados.</h2>'
-        }
-
-        else if(usuario.VerificaAgencia() && usuario.VerificaConta() && usuario.VerificaDv()){
-            console.log('Tipo de conta errada')
-            tela.innerHTML = '<h2>Tipo de conta errada!! Corrija os dados. </h2>'
-        }
-
-        else if(usuario.VerificaAgencia() && usuario.VerificaTipoConta() && usuario.VerificaDv()){
-            console.log('Conta errada')
-            tela.innerHTML = '<h2>Conta errada!! Corrijir os dados. </h2>'
-        }
-
-        else if(usuario.VerificaAgencia() && usuario.VerificaConta() && usuario.VerificaTipoConta()){
-            console.log('DV errado')
-            tela.innerHTML = '<h2> Dv errado!! Corrijir os dados </h2>'
-        }
-
-        
-        
-    }
 
 //}

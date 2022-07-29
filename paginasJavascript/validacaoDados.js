@@ -94,7 +94,7 @@ class Verifica{
 
     VerificaSaldo(id){
 
-        if(this.saldo == usuariosCaixa[id].saldo){
+        if(this.saldo >= 1) {
                 return true
         }
 

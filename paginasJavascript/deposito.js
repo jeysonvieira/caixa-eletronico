@@ -21,6 +21,7 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
     //DIV E PARÁGRAFOS OCULTO DA TELA.
 
     const tela = document.getElementById('teladocaixa')
+    const h2tela = document.getElementById('h2tela')
     const p1 = document.getElementById('p1')
     const p2 = document.getElementById('p2')
     const p3 = document.getElementById('p3')
@@ -111,24 +112,53 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
 
                 console.log(usuarioOficial)
                 
-                const usuario = new Verifica(id, nome, agencia, tipoconta, conta, dv, '', ddd, telefone)
+                const usuario = new Verifica(id, nome, agencia, tipoconta, conta, dv, Number(valor), ddd, telefone)
         
-                if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
+                if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id) && usuario.VerificaSaldo(id)){
+
+                    usuarioOficial.saldo += Number(valor)
+
+                    h2tela.classList.add('ocultarP')
 
                     console.log('Todos dados correto!!!')
                     p1.classList.remove('ocultarP')
                     p2.classList.remove('ocultarP')
                     p3.classList.remove('ocultarP')
                     p4.classList.remove('ocultarP')
+
+
+                    idUsuario.innerText = usuarioOficial.id
+                    nomeUsuario.innerText = usuarioOficial.nome
+                    numeroUsuario.innerText = usuarioOficial.ddd + ' ' + usuarioOficial.numero
+                    saldoUsuario.innerText = usuarioOficial.saldo
+
+
+                    function finaliza(){
+                        linha1.classList.add('ocultar')
+                        linha2.classList.add('ocultar')
+                        botaoSub.classList.add('ocultar')
+
+                        linha3.innerHTML = '<h2>DINHEIRO DEPOSITADO<h2>'
+
+                    }
+
+                    finaliza()
         
                     
         
+                }
+
+                else if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
+                    console.log('Digite o valor a ser depositado.')
+
+                    h2tela.innerText = 'Digite o valor a ser depositado.'
+
                 }
         
                 else if(usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
                     console.log('Agencia errada')
 
-                    tela.innerHTML = '<h2>Tipo de agência errada!! Corrija os dados. </h2>'
+                    h2tela.innerText = 'Tipo de agência errada!! Corrija os dados.'
 
                     
                 
@@ -136,17 +166,17 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
         
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
                     console.log('Tipo de conta errada')
-                    tela.innerHTML = '<h2>Tipo de conta errada!! Corrija os dados. </h2>'
+                    h2tela.innerText = 'Tipo de conta errada!! Corrija os dados.'
                 }
         
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaDv(id)){
                     console.log('Conta errada')
-                    tela.innerHTML = '<h2>Conta errada!! Corrijir os dados. </h2>'
+                    h2tela.innerText = 'Conta errada!! Corrijir os dados.'
                 }
             
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaConta(id) && usuario.VerificaTipoConta(id)){
                     console.log('DV errado')
-                    tela.innerHTML = '<h2> Dv errado!! Corrijir os dados </h2>'
+                    h2tela.innerText = 'Dv errado!! Corrijir os dados.'
                 }
 
                 

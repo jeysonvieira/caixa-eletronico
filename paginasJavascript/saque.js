@@ -123,8 +123,7 @@ function criaNome(nomeUsu){
 
                 Add('ocultar', primeiralinha, terceiralinha, h2tela)
 
-                Remove('ocultarP', p1, p2, p3, p4, )
-                Remove('ocultar', segundalinha)
+                Remove('ocultar', p1, p2, p3, p4, segundalinha)
 
 
 
@@ -148,7 +147,7 @@ function criaNome(nomeUsu){
                         saldoUsuario.innerText = dadosUsuario.saldo
 
                         Add('ocultar', segundalinha, confirmar)
-                        console.log(valor)
+
                     }
 
                     else{

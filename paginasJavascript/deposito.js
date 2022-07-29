@@ -1,5 +1,6 @@
 import Verifica from "../paginasJavascript/validacaoDados.js";
 import usuariosCaixa from "../paginasJavascript/arrays.js";
+import { Add, Remove } from "./AddRemove.js";
 
 
 //window.onload = function(){
@@ -16,6 +17,8 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
     const ValorForm = document.getElementById('valor')
     const dddForm = document.getElementById('ddd')
     const TelefoneForm = document.getElementById('telefone')
+
+    const labelValor = document.getElementById('label5')
 
 
     //DIV E PARÁGRAFOS OCULTO DA TELA.
@@ -74,12 +77,9 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
 
         if(nomeUsu.VerificaNome()){
 
-            divnome.classList.add('ocultar')
-            
-            linha1.classList.remove('ocultar')
-            linha2.classList.remove('ocultar')
-            linha3.classList.remove('ocultar')
-            botaoSub.classList.remove('ocultar')
+            Add('ocultar', divnome)
+
+            Remove('ocultar', linha1, linha2, linha3, botaoSub)
 
             const id = nomeUsu.VerificaNome() - 1
 
@@ -110,7 +110,7 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
 
                 const usuarioOficial = usuariosCaixa[id]
 
-                console.log(usuarioOficial)
+
                 
                 const usuario = new Verifica(id, nome, agencia, tipoconta, conta, dv, Number(valor), ddd, telefone)
         
@@ -118,13 +118,9 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
 
                     usuarioOficial.saldo += Number(valor)
 
-                    h2tela.classList.add('ocultarP')
+                    Add('ocultar', h2tela, linha1,ValorForm, labelValor , linha3, btn)
 
-                    console.log('Todos dados correto!!!')
-                    p1.classList.remove('ocultarP')
-                    p2.classList.remove('ocultarP')
-                    p3.classList.remove('ocultarP')
-                    p4.classList.remove('ocultarP')
+                    Remove('ocultar', p1, p2, p3, p4)
 
 
                     idUsuario.innerText = usuarioOficial.id
@@ -133,30 +129,23 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
                     saldoUsuario.innerText = usuarioOficial.saldo
 
 
-                    function finaliza(){
-                        linha1.classList.add('ocultar')
-                        linha2.classList.add('ocultar')
-                        botaoSub.classList.add('ocultar')
 
-                        linha3.innerHTML = '<h2>DINHEIRO DEPOSITADO<h2>'
 
-                    }
-
-                    finaliza()
+                    linha2.innerHTML = '<h2>DINHEIRO DEPOSITADO!<h2>'
         
                     
         
                 }
 
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
-                    console.log('Digite o valor a ser depositado.')
+
 
                     h2tela.innerText = 'Digite o valor a ser depositado.'
 
                 }
         
                 else if(usuario.VerificaTipoConta(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
-                    console.log('Agencia errada')
+
 
                     h2tela.innerText = 'Tipo de agência errada!! Corrija os dados.'
 
@@ -165,17 +154,17 @@ import usuariosCaixa from "../paginasJavascript/arrays.js";
                 }
         
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaConta(id) && usuario.VerificaDv(id)){
-                    console.log('Tipo de conta errada')
+
                     h2tela.innerText = 'Tipo de conta errada!! Corrija os dados.'
                 }
         
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaTipoConta(id) && usuario.VerificaDv(id)){
-                    console.log('Conta errada')
+
                     h2tela.innerText = 'Conta errada!! Corrijir os dados.'
                 }
             
                 else if(usuario.VerificaAgencia(id) && usuario.VerificaConta(id) && usuario.VerificaTipoConta(id)){
-                    console.log('DV errado')
+
                     h2tela.innerText = 'Dv errado!! Corrijir os dados.'
                 }
 

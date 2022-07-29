@@ -92,10 +92,6 @@ main #teladocaixa{
     width: 50px;
 }
 
-.ocultarP{
-    visibility: hidden;
-}
-
 .alinhamentoP{
     display: inline;
     
